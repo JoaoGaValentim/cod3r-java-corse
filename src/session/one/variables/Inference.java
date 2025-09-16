@@ -1,4 +1,4 @@
-package session.one;
+package session.one.variables;
 
 public class Inference {
 	public static void main(String[] args) {
