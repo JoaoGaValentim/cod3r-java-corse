@@ -1,4 +1,4 @@
-package session.one;
+package session.one.variables;
 
 import java.util.Date;
 
