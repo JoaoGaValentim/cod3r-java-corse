@@ -20,5 +20,5 @@ public class SalaryAverage {
 		System.out.printf("Média salarial é %.2f", average);
 		sc.close();
 	}
-
 }
+ 
