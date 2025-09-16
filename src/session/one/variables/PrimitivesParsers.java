@@ -1,4 +1,4 @@
-package session.one;
+package session.one.variables;
 
 public class PrimitivesParsers {
 	public static void main(String[] args) {

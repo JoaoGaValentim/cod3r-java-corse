@@ -1,4 +1,4 @@
-package session.one;
+package session.one.variables;
 
 import java.util.Locale;
 import java.util.Scanner;

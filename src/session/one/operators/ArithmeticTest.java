@@ -1,4 +1,4 @@
-package session.one;
+package session.one.operators;
 
 public class ArithmeticTest {
   public static void main(String[] args) {
