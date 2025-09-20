@@ -9,6 +9,7 @@ public class RelationalOperators {
         // % módulo
         // == igual a
         // != diferente
+        // = atribuição
 
         var aNumericNumber = 97;
         var aCharValue = 'a';
