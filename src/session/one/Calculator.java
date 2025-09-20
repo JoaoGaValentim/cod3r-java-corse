@@ -10,22 +10,10 @@ public class Calculator {
 
         Double resultOperation = 0.0;
 
-        if (operation.equals("+")) {
-            resultOperation = firstValue + lastValue;
-            System.err.println(firstValue + lastValue);
-        }
-
-        if (operation.equals("-")) {
-            resultOperation = firstValue - lastValue;
-        }
-
-        if (operation.equals("*")) {
-            resultOperation = firstValue * lastValue;
-        }
-
-        if (operation.equals("/")) {
-            resultOperation = firstValue / lastValue;
-        }
+        resultOperation = "+".equals(operation) ? firstValue + lastValue : resultOperation;
+        resultOperation = "-".equals(operation) ? firstValue - lastValue : resultOperation;
+        resultOperation = "*".equals(operation) ? firstValue * lastValue : resultOperation;
+        resultOperation = "/".equals(operation) ? firstValue / lastValue : resultOperation;
 
         String formattedResult = String.format("RESULTADO DE %s %s %s = %.2f", firstValue, operation, lastValue,
                 resultOperation);
