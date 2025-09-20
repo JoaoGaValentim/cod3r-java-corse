@@ -9,7 +9,6 @@ public class Calculator {
         String operation = JOptionPane.showInputDialog("Informe uma das 4 operações (+, -, * ou /): ");
 
         Double resultOperation = 0.0;
-
         resultOperation = "+".equals(operation) ? firstValue + lastValue : resultOperation;
         resultOperation = "-".equals(operation) ? firstValue - lastValue : resultOperation;
         resultOperation = "*".equals(operation) ? firstValue * lastValue : resultOperation;
