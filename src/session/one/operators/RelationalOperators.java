@@ -8,6 +8,7 @@ public class RelationalOperators {
         // <= menor ou igual a que
         // % módulo
         // == igual a
+        // != diferente
 
         var aNumericNumber = 97;
         var aCharValue = 'a';
@@ -20,5 +21,6 @@ public class RelationalOperators {
         System.out.println(aircraftSize > 1000);
         System.out.println(aircraftSize < 1000);
         System.out.println(aircraftSize <= 1000);
+        System.out.println(aircraftSize != 1000);
     }
 }
