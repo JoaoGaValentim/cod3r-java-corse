@@ -4,7 +4,10 @@ import java.time.LocalDate;
 
 public class SwitchControlStructure {
     public static void main(String[] args) {
+        // Os dias da semana em java iniciam-se em 1 (segunda)
+        // e terminam em 7 (domingo)
         int dayOfWeek = LocalDate.now().getDayOfWeek().getValue();
+
         switch (dayOfWeek) {
             case 1:
                 System.out.println("Segunda");
