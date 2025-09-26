@@ -1,7 +1,5 @@
 package session.one.exercises;
 
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 public class TemperatureExercise {

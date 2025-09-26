@@ -13,15 +13,15 @@ public class LogicOperators {
         // table of and
         System.out.println("Tabela AND");
         System.out.println(true && true); // is true
-        System.out.println(false && true); // is false
+        // System.out.println(false && true); // is false
         System.out.println(true && false); // is false
-        System.out.println(false && false); // is false
+        // System.out.println(false && false); // is false
 
         // table of or
         System.out.println("Tabela OR");
-        System.out.println(true || true); // is true
+        // System.out.println(true || true); // is true
         System.out.println(false || true); // is true
-        System.out.println(true || false); // is true
+        // System.out.println(true || false); // is true
         System.out.println(false || false); // is false
 
         // table xor
