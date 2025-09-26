@@ -1,4 +1,4 @@
-package session.two;
+package session.two.controls;
 
 import java.util.Scanner;
 

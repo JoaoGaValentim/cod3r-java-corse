@@ -1,4 +1,4 @@
-package session.two;
+package session.two.controls;
 
 import java.util.Scanner;
 
@@ -14,6 +14,7 @@ public class IfControlStructure {
         var isLegalAge = age >= 18;
         var isChildren = age >= 5 && age <= 10;
         var isTeen = age >= 11 && age <= 17;
+
         if (isLegalAge) {
             System.out.println("Você é maior de idade.");
         }

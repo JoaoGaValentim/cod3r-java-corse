@@ -1,4 +1,4 @@
-package session.two;
+package session.two.controls;
 
 public class SwitchPartTwoControlStruct {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package session.two;
+package session.two.loops;
 
 public class BreakExample {
     public static void main(String[] args) {
