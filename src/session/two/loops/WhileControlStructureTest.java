@@ -1,4 +1,4 @@
-package session.two;
+package session.two.loops;
 
 import java.util.Scanner;
 
