@@ -26,8 +26,8 @@ public class ProductTest {
         System.out.println(notebook.price);
         System.out.println(notebook.discount);
 
-        var smartPhoneNewPrice = smartPhone.price - (smartPhone.price * smartPhone.discount);
-        var notebookNewPrice = notebook.price - (notebook.price * notebook.discount);
+        var smartPhoneNewPrice = smartPhone.calculateNewPriceWithDiscount(0.2);
+        var notebookNewPrice = notebook.calculateNewPriceWithDiscount();
 
         System.out.println(smartPhoneNewPrice);
         System.out.println(notebookNewPrice);
