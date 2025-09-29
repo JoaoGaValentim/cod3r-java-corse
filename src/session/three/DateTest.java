@@ -16,5 +16,9 @@ public class DateTest {
 
         currentDate.printDate();
         date.printDate();
+
+        var currentDateFormatted = currentDate.getFormattedDate();
+
+        System.out.println(currentDateFormatted);
     }
 }
