@@ -17,4 +17,8 @@ public class Date {
     String getFormattedDate() {
         return String.format("%s-%s-%s", year, month, day);
     }
+
+    void printDate() {
+        System.out.println(getFormattedDate());
+    }
 }
