@@ -14,7 +14,10 @@ public class DateTest {
         date.month = 12;
         date.year = 1972;
 
-        System.out.printf("%s\n", currentDate.getFormattedDate());
-        System.out.printf("%s\n", date.getFormattedDate());
+        var currentFormattedDate = currentDate.getFormattedDate();
+        var formattedDate = date.getFormattedDate();
+
+        System.out.printf("%s\n", currentFormattedDate);
+        System.out.printf("%s\n", formattedDate);
     }
 }
