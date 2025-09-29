@@ -18,6 +18,15 @@ public class Date {
         return String.format("%s-%s-%s", year, month, day);
     }
 
+    /**
+     * <h4>printDate</h4>
+     * 
+     * <p>
+     * This method print date
+     * 
+     * @since 1.0
+     * @see #printDate()
+     */
     void printDate() {
         System.out.println(getFormattedDate());
     }
