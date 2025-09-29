@@ -15,6 +15,6 @@ public class DateTest {
         date.year = 1972;
 
         System.out.printf("%s\n", currentDate.getFormattedDate());
-        System.out.printf("%s\n", date.getFormattedDate(date.year, date.month, date.day));
+        System.out.printf("%s\n", date.getFormattedDate());
     }
 }
