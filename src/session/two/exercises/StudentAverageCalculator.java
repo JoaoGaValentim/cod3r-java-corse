@@ -23,12 +23,12 @@ public class StudentAverageCalculator {
 
         if (isApproved) {
             message += "Você foi aprovado(a)!";
-            JOptionPane.showMessageDialog(null, message);
+            JOptionPane.showMessageDialog(null, message, null, JOptionPane.INFORMATION_MESSAGE);
         }
 
         if (!isApproved) {
             message += "Você foi reprovado(a) e vai para exame!";
-            JOptionPane.showMessageDialog(null, message);
+            JOptionPane.showMessageDialog(null, message, null, JOptionPane.WARNING_MESSAGE);
         }
     }
 }
