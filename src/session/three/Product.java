@@ -3,15 +3,14 @@ package session.three;
 public class Product {
     String name;
     double price;
-    double discount;
+    static double discount = 0.25;
 
     Product() {
     }
 
-    Product(String name, double price, double discount) {
+    Product(String name, double price) {
         this.name = name;
         this.price = price;
-        this.discount = discount;
     }
 
     /***

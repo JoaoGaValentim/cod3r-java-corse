@@ -6,10 +6,12 @@ public class ProductTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        var smartPhone = new Product("Smartphone", 3455.22, 0.15);
-        var notebook = new Product("Laptop Lenovo", 5432.65, 0.16);
+        Product.discount = 0.3;
 
-        var smartPhoneNewPrice = smartPhone.calculateNewPriceWithDiscount(0.2);
+        var smartPhone = new Product("Smartphone", 3455.22);
+        var notebook = new Product("Laptop Lenovo", 5432.65);
+
+        var smartPhoneNewPrice = smartPhone.calculateNewPriceWithDiscount(0.22);
         var notebookNewPrice = notebook.calculateNewPriceWithDiscount();
 
         smartPhone.printProduct();
