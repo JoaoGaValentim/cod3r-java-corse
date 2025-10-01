@@ -5,6 +5,15 @@ public class Product {
     double price;
     double discount;
 
+    Product() {
+    }
+
+    Product(String name, double price, double discount) {
+        this.name = name;
+        this.price = price;
+        this.discount = discount;
+    }
+
     /***
      * <h4>calculateNewPriceWithDiscount</h4>
      * <p>
@@ -29,5 +38,13 @@ public class Product {
      */
     double calculateNewPriceWithDiscount(double managerDiscount) {
         return price - (price * (managerDiscount + discount));
+    }
+
+    void printProduct() {
+        System.out.println();
+        System.out.println(name);
+        System.out.println(price);
+        System.out.println(discount);
+        System.out.println();
     }
 }

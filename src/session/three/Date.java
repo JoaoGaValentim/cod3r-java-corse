@@ -5,6 +5,18 @@ public class Date {
     int day;
     int month;
 
+    Date() {
+        this.day = 1;
+        this.month = 1;
+        this.year = 1970;
+    }
+
+    Date(int year, int month, int day) {
+        this.year = year;
+        this.month = month;
+        this.day = day;
+    }
+
     /**
      * <h4>getFormattedDate</h4>
      * <p>

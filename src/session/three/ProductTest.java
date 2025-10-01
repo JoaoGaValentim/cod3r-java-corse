@@ -6,28 +6,14 @@ public class ProductTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        var smartPhone = new Product();
-
-        smartPhone.name = "Celular";
-        smartPhone.price = 3456.66;
-        smartPhone.discount = 0.15;
-
-        System.out.println(smartPhone.name);
-        System.out.println(smartPhone.price);
-        System.out.println(smartPhone.discount);
-
-        var notebook = new Product();
-
-        notebook.name = "Laptop Lenovo";
-        notebook.price = 5432.66;
-        notebook.discount = 0.16;
-
-        System.out.println(notebook.name);
-        System.out.println(notebook.price);
-        System.out.println(notebook.discount);
+        var smartPhone = new Product("Smartphone", 3455.22, 0.15);
+        var notebook = new Product("Laptop Lenovo", 5432.65, 0.16);
 
         var smartPhoneNewPrice = smartPhone.calculateNewPriceWithDiscount(0.2);
         var notebookNewPrice = notebook.calculateNewPriceWithDiscount();
+
+        smartPhone.printProduct();
+        notebook.printProduct();
 
         System.out.println(smartPhoneNewPrice);
         System.out.println(notebookNewPrice);
