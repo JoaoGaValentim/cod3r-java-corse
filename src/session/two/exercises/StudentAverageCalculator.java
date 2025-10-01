@@ -15,7 +15,7 @@ public class StudentAverageCalculator {
                 .valueOf(JOptionPane.showInputDialog("Informe sua média da disciplina no AVA: ")) * 0.4;
 
         activitiesMentionTotal += disciplineTestPoints;
-        double average = activitiesMentionTotal;
+        final double average = activitiesMentionTotal;
 
         message = String.format("Sua média final é %.2f \n", average);
 
