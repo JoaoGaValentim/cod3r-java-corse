@@ -9,10 +9,10 @@ public class StudentAverageCalculator {
         double activitiesMentionTotal = 0.0;
 
         double disciplineTestPoints = Double
-                .valueOf(JOptionPane.showInputDialog("Informe a sua nota da prova regular: ")) * 0.4;
+                .valueOf(JOptionPane.showInputDialog("Informe a sua nota da prova regular: ")) * 0.6;
 
         activitiesMentionTotal = Double
-                .valueOf(JOptionPane.showInputDialog("Informe sua média da disciplina no AVA: ")) * 0.6;
+                .valueOf(JOptionPane.showInputDialog("Informe sua média da disciplina no AVA: ")) * 0.4;
 
         activitiesMentionTotal += disciplineTestPoints;
         double average = activitiesMentionTotal;
