@@ -7,6 +7,7 @@ public class ArrayTest {
         var totalActivitiesMentions = Integer.valueOf(JOptionPane.showInputDialog("Quantas notas o aluno tem? "));
         var sumMentions = 0.0;
         var average = 0.0;
+        // array of mentions
         double[] studentMentions = new double[totalActivitiesMentions];
 
         for (int i = 0; i < studentMentions.length; i++) {
