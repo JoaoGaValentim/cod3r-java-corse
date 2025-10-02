@@ -6,10 +6,10 @@ public class ReferenceVsValueTest {
 
     public static void main(String[] args) {
         ReferenceVsValueTest referenceVsValueTest = new ReferenceVsValueTest();
-        System.out.println(referenceVsValueTest.a);
+        System.out.println(referenceVsValueTest.a); // non-statics is instance
         referenceVsValueTest.a++;
 
         System.out.println(referenceVsValueTest.a);
-        System.out.println(b);
+        System.out.println(b); // static field access static methods
     }
 }

@@ -6,9 +6,10 @@ public class Date {
     int month;
 
     Date() {
-        this.day = 1;
-        this.month = 1;
-        this.year = 1970;
+        // this.day = 1;
+        // this.month = 1;
+        // this.year = 1970;
+        this(1970, 1, 1);
     }
 
     Date(int year, int month, int day) {
@@ -17,17 +18,34 @@ public class Date {
         this.day = day;
     }
 
+    /***
+     * <h4>formatDateValue</h4>
+     * <p>
+     * This method format decimal houses to left.
+     * 
+     * <p>
+     * if decimalInt <= 9 then "0" + decimalInt else decimalInt
+     * 
+     * @param value
+     * @return valueFormatted
+     * @see #formatDateValue(int)
+     */
+    String formatDateValue(int value) {
+        return value <= 9 ? "0" + value : String.valueOf(value);
+    }
+
     /**
      * <h4>getFormattedDate</h4>
      * <p>
      * This method return a formatted date in US pattern
      * 
-     * @see #getFormattedDate()
      * @since 1.0
      * @return YYYY-MM-DD
+     * @see #getFormattedDate()
      */
     String getFormattedDate() {
-        return String.format("%s-%s-%s", year, month, day);
+        final String pattern = "%s-%s-%s"; // local
+        return String.format(pattern, formatDateValue(year), formatDateValue(month), formatDateValue(day));
     }
 
     /**
@@ -42,4 +60,9 @@ public class Date {
     void printDate() {
         System.out.println(getFormattedDate());
     }
+
+    // static void agora() {
+    // // this é inválido dentro de
+    // // métodos estáticos
+    // }
 }
