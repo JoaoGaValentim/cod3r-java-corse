@@ -1,6 +1,6 @@
 package session.four;
 
-public class MatrizArray {
+public class MatrixArray {
     public static void main(String[] args) {
         double[][] numericsMatrixA = new double[][] {
                 { 1, 3, 5 },
