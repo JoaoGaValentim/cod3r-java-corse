@@ -6,9 +6,17 @@ public class Date {
     int month;
 
     Date() {
-        // this.day = 1;
-        // this.month = 1;
-        // this.year = 1970;
+        // byte, short, int, long -> 0
+        // float, double -> 0.0
+        // boolean -> false
+        // char -> '\u0000'
+        // Object -> null
+
+        // int a; // não inicia por padrão (definição de linguagem)
+        // The local variable a may not have been initialized
+        // Java(536870963)
+        // System.out.println(a);
+        // int a = 0; -> você tem que inicializar
         this(1970, 1, 1);
     }
 
