@@ -16,6 +16,6 @@ public class User {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return 0;
     }
 }
