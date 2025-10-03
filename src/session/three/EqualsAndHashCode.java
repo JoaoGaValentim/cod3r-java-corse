@@ -13,5 +13,7 @@ public class EqualsAndHashCode {
         System.out.println(admin == manager);
         System.out.println(admin.equals(manager));
         System.out.println(manager.equals(admin));
+
+        System.out.println(admin.equals(new Object()));
     }
 }
