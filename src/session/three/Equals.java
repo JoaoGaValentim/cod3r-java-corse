@@ -1,6 +1,6 @@
 package session.three;
 
-public class EqualsAndHashCode {
+public class Equals {
     public static void main(String[] args) {
         User admin = new User();
         admin.name = "João";
