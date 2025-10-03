@@ -7,6 +7,7 @@ import java.util.Map.Entry;
 public class MapExample {
     public static void main(String[] args) {
         // sorted with insert order
+        // MNap is more flexible
         Map<String, Object> user = new LinkedHashMap<>();
 
         user.put("name", "João");
