@@ -19,6 +19,10 @@ public class StackExample {
         System.out.println(programmingLanguages.isEmpty());
         System.out.println(programmingLanguages.contains("C#"));
 
+        for (String programmingLanguage : programmingLanguages) {
+            System.out.println(programmingLanguage);
+        }
+
         // System.err.println(programmingLanguages.pop()); // play exception
         System.err.println(programmingLanguages.peek());
         System.err.println(programmingLanguages.poll());
