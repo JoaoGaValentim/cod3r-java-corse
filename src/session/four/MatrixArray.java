@@ -1,5 +1,6 @@
 package session.four;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MatrixArray {
@@ -26,6 +27,10 @@ public class MatrixArray {
         final double average = total / studentsMention.length;
 
         System.out.printf("Média da turma = %.2f\n", average);
+
+        for (double[] mentions : studentsMention) {
+            System.err.println(Arrays.toString(mentions));
+        }
 
         sc.close();
     }
