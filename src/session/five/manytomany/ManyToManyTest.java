@@ -12,14 +12,19 @@ public class ManyToManyTest {
         studentTwo.addCourse(coursePython);
         studentTwo.addCourse(courseJava);
 
-        for (Student student : courseJava.students) {
-            System.out.println("Curso de " + courseJava.name);
-            System.out.println(student);
+        if (studentTwo.getCourseByName("java") != null) {
+            for (Student student : courseJava.students) {
+                System.out.println("Curso de " + courseJava.name);
+                System.out.println(student);
+            }
+            System.out.println();
         }
 
-        for (Student student : coursePython.students) {
+        if (studentOne.getCourseByName("python") != null) {
             System.out.println("Curso de " + coursePython.name);
-            System.out.println(student);
+            for (Student student : coursePython.students) {
+                System.out.println(student);
+            }
         }
     }
 }

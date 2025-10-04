@@ -16,8 +16,17 @@ public class Student {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return name;
+    }
+
+    Course getCourseByName(String name) {
+        for (Course course : courses) {
+            if (course.name.equalsIgnoreCase(name)) {
+                return course;
+            }
+        }
+
+        return null;
     }
 
     void addCourse(Course course) {
