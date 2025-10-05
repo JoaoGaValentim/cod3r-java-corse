@@ -2,12 +2,12 @@ package session.five.inheritance.inheritancetest.test;
 
 public class Car {
     public final double MAX_VELOCITY;
-    private double delta = 5.0;
-    private double actualSpeed;
+    protected double delta = 5.0; // protected visível nas classes filhas
+    protected double actualSpeed;
     protected boolean carIsOn;
     protected boolean isBreak;
 
-    public Car(boolean carIsOn, double MAX_VELOCITY) {
+    protected Car(boolean carIsOn, double MAX_VELOCITY) {
         this.carIsOn = carIsOn;
         this.isBreak = false;
         this.MAX_VELOCITY = MAX_VELOCITY;

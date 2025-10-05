@@ -1,9 +1,6 @@
 package session.five.inheritance.inheritancetest.test;
 
 public class Ferrari extends Car {
-    private double actualSpeed;
-    private double delta;
-
     public Ferrari() {
         super(false, 310);
     }
@@ -32,11 +29,16 @@ public class Ferrari extends Car {
     @Override
     public void breakCar() {
         if (actualSpeed > 0 && !isBreak) {
-            actualSpeed -= 5.0;
+            actualSpeed -= 15.0;
         }
 
         if (actualSpeed == 0) {
             isBreak = true;
         }
+    }
+
+    @Override
+    public double getActualSpeed() {
+        return actualSpeed;
     }
 }
