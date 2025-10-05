@@ -1,6 +1,5 @@
 package session.five.inheritance.inheritancetest;
 
-import session.five.inheritance.inheritancetest.test.Car;
 import session.five.inheritance.inheritancetest.test.Civic;
 import session.five.inheritance.inheritancetest.test.Ferrari;
 
