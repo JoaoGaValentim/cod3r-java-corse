@@ -7,7 +7,7 @@ import session.five.inheritance.inheritancetest.test.Ferrari;
 public class Drive {
     public static void main(String[] args) {
         double speed = 0.0;
-        Car civic = new Civic();
+        Civic civic = new Civic();
         civic.turnOnCar();
 
         for (int i = 0; i < 10; i++) {
@@ -18,7 +18,7 @@ public class Drive {
         civic.breakCar();
         System.err.println("Civic após frear => " + civic.getActualSpeed());
 
-        Car ferrari = new Ferrari();
+        Ferrari ferrari = new Ferrari();
         ferrari.turnOnCar();
 
         for (int i = 0; i < 10; i++) {
