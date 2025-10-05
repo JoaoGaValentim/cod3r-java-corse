@@ -1,29 +1,29 @@
-package session.five.inheritance.inheritancetest;
+package session.five.inheritance.inheritancetest.test;
 
 public class Car {
-    final double MAX_VELOCITY;
-    double delta = 5.0;
-    double actualSpeed;
-    boolean carIsOn;
-    boolean isBreak;
+    public final double MAX_VELOCITY;
+    private double delta = 5.0;
+    private double actualSpeed;
+    protected boolean carIsOn;
+    protected boolean isBreak;
 
-    Car(boolean carIsOn, double MAX_VELOCITY) {
+    public Car(boolean carIsOn, double MAX_VELOCITY) {
         this.carIsOn = carIsOn;
         this.isBreak = false;
         this.MAX_VELOCITY = MAX_VELOCITY;
     }
 
-    void turnOnCar() {
+    public void turnOnCar() {
         carIsOn = true;
     }
 
-    void turnOffCar() {
+    public void turnOffCar() {
         carIsOn = false;
         isBreak = true;
         actualSpeed = 0.0;
     }
 
-    double accelerate() {
+    public double accelerate() {
         if (actualSpeed == 0.0 && !carIsOn || isBreak) {
             return actualSpeed;
         }
@@ -39,7 +39,7 @@ public class Car {
         return actualSpeed;
     }
 
-    void breakCar() {
+    public void breakCar() {
         if (actualSpeed > 0 && !isBreak) {
             actualSpeed -= 5.0;
         }
@@ -47,5 +47,13 @@ public class Car {
         if (actualSpeed == 0) {
             isBreak = true;
         }
+    }
+
+    public double getActualSpeed() {
+        return actualSpeed;
+    }
+
+    public String getCarStatus() {
+        return carIsOn ? "ligado" : "desligado";
     }
 }

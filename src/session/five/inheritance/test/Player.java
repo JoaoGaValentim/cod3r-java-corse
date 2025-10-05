@@ -1,21 +1,24 @@
-package session.five.inheritance;
+package session.five.inheritance.test;
 
 public class Player {
-    double positionX;
-    double positionY;
-    int life = 100;
+    private double positionX;
+    private double positionY;
+    private int life;
+    protected int id;
+    public String name;
 
-    Player() {
-        positionX = 0;
-        positionY = 0;
+    public Player() {
+        positionX = 0.0;
+        positionY = 0.0;
     }
 
-    Player(double positionX, double positionY) {
+    public Player(double positionX, double positionY) {
         this.positionX = positionX;
         this.positionY = positionY;
+        this.life = 100;
     }
 
-    boolean walk(Direction direction) {
+    public boolean walk(Direction direction) {
         switch (direction) {
             case Direction.NORTH:
                 positionY--;
@@ -35,16 +38,20 @@ public class Player {
         return true;
     }
 
-    boolean attack(Player opponent) {
-        double deltaX = Math.abs(positionX - opponent.positionX);
-        double deltaY = Math.abs(positionY - opponent.positionY);
+    public boolean attack(Player opponent) {
+        double deltaX = Math.abs(this.positionX - opponent.positionX);
+        double deltaY = Math.abs(this.positionY - opponent.positionY);
         boolean attackSuccess = false;
 
-        if ((deltaX == 0 && deltaY == 1) || (deltaX == 1 && deltaY == 0)) {
+        if ((deltaX == 0.0 && deltaY == 1.0) || (deltaX == 1.0 && deltaY == 0.0)) {
             opponent.life -= 10;
             attackSuccess = true;
         }
 
         return attackSuccess;
+    }
+
+    public int getLife() {
+        return life;
     }
 }

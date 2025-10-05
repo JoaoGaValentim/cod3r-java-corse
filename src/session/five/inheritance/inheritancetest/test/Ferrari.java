@@ -1,17 +1,19 @@
-package session.five.inheritance.inheritancetest;
+package session.five.inheritance.inheritancetest.test;
 
 public class Ferrari extends Car {
+    private double actualSpeed;
+    private double delta;
 
-    Ferrari() {
+    public Ferrari() {
         super(false, 310);
     }
 
-    Ferrari(boolean carIsOn, double MAX_VELOCITY) {
+    public Ferrari(boolean carIsOn, double MAX_VELOCITY) {
         super(carIsOn, MAX_VELOCITY);
     }
 
     @Override
-    double accelerate() {
+    public double accelerate() {
         if (actualSpeed == 0.0 && !carIsOn || isBreak) {
             return actualSpeed;
         }
@@ -28,9 +30,9 @@ public class Ferrari extends Car {
     }
 
     @Override
-    void breakCar() {
+    public void breakCar() {
         if (actualSpeed > 0 && !isBreak) {
-            actualSpeed -= 15.0;
+            actualSpeed -= 5.0;
         }
 
         if (actualSpeed == 0) {

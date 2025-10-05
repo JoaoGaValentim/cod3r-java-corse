@@ -1,5 +1,9 @@
 package session.five.inheritance.inheritancetest;
 
+import session.five.inheritance.inheritancetest.test.Car;
+import session.five.inheritance.inheritancetest.test.Civic;
+import session.five.inheritance.inheritancetest.test.Ferrari;
+
 public class Drive {
     public static void main(String[] args) {
         double speed = 0.0;
@@ -12,7 +16,7 @@ public class Drive {
         }
 
         civic.breakCar();
-        System.err.println("Civic após frear => " + civic.actualSpeed);
+        System.err.println("Civic após frear => " + civic.getActualSpeed());
 
         Car ferrari = new Ferrari();
         ferrari.turnOnCar();
@@ -23,15 +27,15 @@ public class Drive {
         }
 
         ferrari.breakCar();
-        System.err.println("Ferrari após frear => " + ferrari.actualSpeed);
+        System.err.println("Ferrari após frear => " + ferrari.getActualSpeed());
 
         civic.turnOffCar();
         ferrari.turnOffCar();
 
-        System.out.println("Civic está em velocidade => " + civic.actualSpeed);
-        System.out.println("Civic está ligado? " + civic.carIsOn);
+        System.out.println("Civic está em velocidade => " + civic.getActualSpeed());
+        System.out.println("Civic está ligado? " + civic.getCarStatus());
 
-        System.out.println("Ferrari está em velocidade => " + ferrari.actualSpeed);
-        System.out.println("Ferrari está ligada? " + ferrari.carIsOn);
+        System.out.println("Ferrari está em velocidade => " + ferrari.getActualSpeed());
+        System.out.println("Ferrari está ligada? " + ferrari.getCarStatus());
     }
 }
