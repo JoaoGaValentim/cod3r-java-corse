@@ -2,7 +2,7 @@ package session.five.inheritance;
 
 public class Game {
     public static void main(String[] args) {
-        Player hero = new Hero();
+        Player hero = new Hero(0.0, 0.0);
         Player monster = new Monster();
 
         hero.positionX = 10;

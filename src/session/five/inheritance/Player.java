@@ -5,6 +5,16 @@ public class Player {
     double positionY;
     int life = 100;
 
+    Player() {
+        positionX = 0;
+        positionY = 0;
+    }
+
+    Player(double positionX, double positionY) {
+        this.positionX = positionX;
+        this.positionY = positionY;
+    }
+
     boolean walk(Direction direction) {
         switch (direction) {
             case Direction.NORTH:
