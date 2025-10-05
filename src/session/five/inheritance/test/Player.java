@@ -1,8 +1,8 @@
 package session.five.inheritance.test;
 
 public class Player {
-    private double positionX;
-    private double positionY;
+    protected double positionX;
+    protected double positionY;
     private int life;
     protected int id;
     public String name;
