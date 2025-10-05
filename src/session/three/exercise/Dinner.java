@@ -13,7 +13,7 @@ public class Dinner {
         People people = new People("João", 88.5);
 
         for (Food food : foods) {
-            people.sneak(food);
+            people.eat(food);
         }
 
         people.printPeople();

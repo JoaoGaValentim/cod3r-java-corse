@@ -8,10 +8,13 @@ public class Drive {
         double speed = 0.0;
         Civic civic = new Civic();
         civic.turnOnCar();
+        civic.startGPS();
 
-        for (int i = 0; i < 10; i++) {
-            speed = civic.accelerate();
-            System.out.println("Velocidade atual do Civic => " + speed);
+        if (!civic.isDoorsOpen()) {
+            for (int i = 0; i < 10; i++) {
+                speed = civic.accelerate();
+                System.out.println("Velocidade atual do Civic => " + speed);
+            }
         }
 
         civic.breakCar();
@@ -19,9 +22,19 @@ public class Drive {
 
         Ferrari ferrari = new Ferrari();
         ferrari.turnOnCar();
+        ferrari.startGPS();
 
         for (int i = 0; i < 10; i++) {
+            if (i <= 5) {
+                ferrari.onSuperSpeed();
+            }
+
+            if (i == 8) {
+                ferrari.offSuperSpeed();
+            }
+
             speed = ferrari.accelerate();
+
             System.out.println("Velocidade atual da Ferrari => " + speed);
         }
 

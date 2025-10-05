@@ -13,7 +13,7 @@ public class People {
         this.weight = weight;
     }
 
-    void sneak(Food food) {
+    void eat(Food food) {
         if (!(food instanceof Food)) {
             System.out.println("Sem comida... Vou ficar magro :/");
         }

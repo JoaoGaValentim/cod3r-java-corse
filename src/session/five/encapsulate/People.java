@@ -2,15 +2,18 @@ package session.five.encapsulate;
 
 public class People {
     private String name;
+    private String lastName;
     private int age;
 
-    public People() {
-
+    public People(String name, String lastName, int age) {
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
     }
 
     @Override
     public String toString() {
-        return name;
+        return name + " " + lastName;
     }
 
     public void setName(String name) {
@@ -29,5 +32,9 @@ public class People {
 
     public int getAge() {
         return age;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 }

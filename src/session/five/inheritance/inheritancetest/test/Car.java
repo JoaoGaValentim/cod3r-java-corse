@@ -21,6 +21,7 @@ public class Car {
         carIsOn = false;
         isBreak = true;
         actualSpeed = 0.0;
+        delta = 0.0;
     }
 
     public double accelerate() {
@@ -28,7 +29,7 @@ public class Car {
             return actualSpeed;
         }
 
-        if (actualSpeed + delta > MAX_VELOCITY) {
+        if (actualSpeed + getDelta() > MAX_VELOCITY) {
             actualSpeed = MAX_VELOCITY;
         }
 
@@ -55,5 +56,9 @@ public class Car {
 
     public String getCarStatus() {
         return carIsOn ? "ligado" : "desligado";
+    }
+
+    public double getDelta() {
+        return delta;
     }
 }
