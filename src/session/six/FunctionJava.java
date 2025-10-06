@@ -11,19 +11,21 @@ public class FunctionJava {
                 new Product("Feijão", 24, 14, 0.3),
                 new Product("Pizza", 33, 20, 0.1));
 
-        Function<String, Product> getProductName = name -> {
+        Function<String, Product> getProductByName = name -> {
             for (Product product : products) {
-                if (product.getName() == name) {
+                if (product.getName().equalsIgnoreCase(name)) {
                     return product;
                 }
             }
             return null;
         };
 
-        Product product = getProductName.apply("Pizza");
+        Function<Product, Double> computePrice = p -> p == null ? 0.0 : p.getQuantity() * p.getPrice();
 
-        if (!product.equals(null)) {
-            System.out.println(product);
-        }
+        var total = getProductByName
+                .andThen(computePrice)
+                .apply("pizza");
+
+        System.out.println(total);
     }
 }
