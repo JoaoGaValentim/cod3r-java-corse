@@ -1,4 +1,4 @@
-package session.six;
+package session.six.lambdatest;
 
 public class Product {
     private final String name;
@@ -42,6 +42,6 @@ public class Product {
     }
 
     public double getDiscount() {
-        return discount / 100;
+        return discount;
     }
 }
