@@ -7,16 +7,7 @@ import java.util.function.Consumer;
 public class JavaConsumer {
     public static void main(String[] args) {
         Consumer<Product> showProductData = product -> {
-            var fields = product.getClass().getDeclaredFields();
-
-            System.out.println();
-            System.out.println("Product(");
-            System.out.printf("\s%s => %s \n", fields[0].getName(), product.getName());
-            System.out.printf("\s%s => %s \n", fields[1].getName(), product.getQuantity());
-            System.out.printf("\s%s => %.2f \n", fields[2].getName(), product.getPrice());
-            System.out.printf("\s%s => %f \n", fields[3].getName(), product.getDiscount());
-            System.out.println(")");
-            System.out.println();
+            System.out.println(product);
         };
 
         List<Product> products = Arrays.asList(

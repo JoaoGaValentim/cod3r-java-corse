@@ -13,6 +13,22 @@ public class Product {
         this.discount = discount;
     }
 
+    @Override
+    public String toString() {
+        String content = """
+                Product {
+                    name => %s
+                    Qtd => %s
+                    price => %.2f
+                    discount => %s%%
+                }
+                """;
+        return String.format(content, this.name,
+                this.quantity,
+                this.price,
+                this.discount * 100.0);
+    }
+
     public String getName() {
         return name;
     }
