@@ -1,6 +1,6 @@
 package session.five.polymorphism;
 
-public class Food {
+abstract public class Food {
     protected double weight;
 
     public Food(double weight) {
