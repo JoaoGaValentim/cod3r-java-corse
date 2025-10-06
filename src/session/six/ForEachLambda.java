@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ForEachLambda {
-    static List<String> approves = Arrays.asList("João", "Clara", "Lucas", "Pedro", "Heloisa");
+    static List<String> approves = Arrays.asList("João", "Clara", "Lucas", "Pedro", "Heloísa");
 
     public static void main(String[] args) {
 
