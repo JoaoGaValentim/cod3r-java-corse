@@ -9,6 +9,7 @@ public class Drive {
         Civic civic = new Civic();
         civic.turnOnCar();
         civic.startGPS();
+        System.out.println("Velocidade do ar-condicionado => " + civic.airSpeed());
 
         if (!civic.isDoorsOpen()) {
             for (int i = 0; i < 10; i++) {
