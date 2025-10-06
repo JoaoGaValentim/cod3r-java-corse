@@ -7,7 +7,6 @@ public class ForEachLambda {
     static List<String> approves = Arrays.asList("João", "Clara", "Lucas", "Pedro", "Heloísa");
 
     public static void main(String[] args) {
-
         System.out.println("==> Padrão corriqueiro");
 
         for (String approved : approves) {
