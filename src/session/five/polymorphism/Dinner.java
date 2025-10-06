@@ -1,7 +1,6 @@
 package session.five.polymorphism;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Dinner {
     public static void main(String[] args) {
