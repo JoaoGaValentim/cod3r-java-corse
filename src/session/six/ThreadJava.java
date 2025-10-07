@@ -8,8 +8,22 @@ public class ThreadJava {
         var threadOne = new Thread(taskOne);
         var threadTwo = new Thread(taskTwo);
 
+        Runnable threadThree = () -> {
+            for (int i = 0; i < 100; i++) {
+                System.out.println(i);
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        };
+
         threadOne.run();
-        System.out.println("---- proxima thread -----");
+        System.out.println(" --- A ---");
         threadTwo.run();
+        System.out.println(" --- B ---");
+        threadThree.run();
     }
 }

@@ -15,7 +15,7 @@ public class MyThread implements Runnable {
         for (int i = min; i <= max; i++) {
             System.out.println(i == 0 ? (i + 1) * max : i + max);
             try {
-                Thread.sleep(2);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
