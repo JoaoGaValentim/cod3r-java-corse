@@ -40,7 +40,7 @@ public class SpaceShip {
 
                 Predicate<Planet> highAge = planet -> planet.getAge() > 3.3e23;
                 Predicate<Planet> highDistance = planet -> planet.getDistance() > 149.6e6;
-                Function<Planet, String> oldPlanet = planet -> String.format("""
+                Function<Planet, String> planetInfo = planet -> String.format("""
                                     Nome: %s
                                     DM: %s
                                     GLX: %s
@@ -51,7 +51,7 @@ public class SpaceShip {
                                 .stream()
                                 .filter(highAge)
                                 .filter(highDistance)
-                                .map(oldPlanet)
+                                .map(planetInfo)
                                 .forEach(System.out::println);
 
         }
