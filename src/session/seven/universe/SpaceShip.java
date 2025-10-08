@@ -2,6 +2,8 @@ package session.seven.universe;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
@@ -37,13 +39,14 @@ public class SpaceShip {
                                 new Planet("Netuno", 1.02e26, 4_498.0e6, 59800.0, 14,
                                                 Arrays.asList("hidrogênio", "hélio", "metano"),
                                                 false, galaxy, null));
+                galaxy.addPlanets(planets);
 
                 Predicate<Planet> highAge = planet -> planet.getAge() > 3.3e23;
                 Predicate<Planet> highDistance = planet -> planet.getDistance() > 149.6e6;
                 Function<Planet, String> planetInfo = planet -> String.format("""
-                                    Nome: %s
-                                    DM: %s
-                                    GLX: %s
+                                Nome: %s
+                                DM: %s
+                                GLX: %s
                                 """, planet.getName(), planet.getGalaxy().getUniverse().getDimensionalCode(),
                                 planet.getGalaxy().getName());
 
@@ -54,5 +57,17 @@ public class SpaceShip {
                                 .map(planetInfo)
                                 .forEach(System.out::println);
 
+                Predicate<Planet> lowDistance = planet -> planet.getDistance() < 227.9e6;
+                Function<Planet, Double> distances = planet -> planet.getDistance();
+                BiFunction<Planet, Double, Planet> addDistance = (planet, value) -> planet.addDistance(value);
+                BinaryOperator<Planet> sumDistance = (fPlanet, lPlanet) -> Planet.combiner(fPlanet, lPlanet);
+
+                var result = planets
+                                .stream()
+                                .filter(lowDistance)
+                                .map(distances)
+                                .reduce(new Planet(), addDistance, sumDistance);
+
+                System.out.println(result.getDistanceSum());
         }
 }
