@@ -11,21 +11,21 @@ public class Cpf extends Document {
 
     public Cpf(String value) {
         super(14, "(^\\d{3}\\x2E\\d{3}\\x2E\\d{3}\\x2D\\d{2}$)", value);
-        validateDocumentIsFieldValue();
+        validateValue();
         cpfPattern = Pattern.compile(pattern);
         cpfMatcher = cpfPattern.matcher(value);
-        validateMatcherDocument();
+        validateMatcher();
     }
 
     @Override
-    public void validateDocumentIsFieldValue() {
-        if (value == null || value.trim().isEmpty()) {
+    public void validateValue() {
+        if (value == null) {
             throw new CpfFieldValueException();
         }
     }
 
     @Override
-    public void validateMatcherDocument() {
+    public void validateMatcher() {
         if (!cpfMatcher.matches()) {
             throw new CpfMatcherException(value);
         }
