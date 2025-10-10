@@ -1,7 +1,5 @@
 package session.eight.document;
 
-import java.util.regex.Matcher;
-
 public abstract class Document {
     protected int totalNumbers;
     protected String pattern;
