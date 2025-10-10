@@ -7,28 +7,28 @@ import session.eight.document.exceptions.CpfDigitException;
 import session.eight.document.exceptions.CpfFieldValueException;
 
 public class Cpf extends Document {
-    private final Pattern cpfPattern;
-    private final Matcher cpfMatcher;
+    private Pattern cpfPattern;
+    private Matcher cpfMatcher;
+    private final boolean cpfFormatIsValid;
 
     public Cpf(String value) {
         super(14, "(^\\d{3}\\x2E\\d{3}\\x2E\\d{3}\\x2D\\d{2}$)", value);
         validateValue();
         validateDigit();
-        cpfPattern = Pattern.compile(pattern);
-        cpfMatcher = cpfPattern.matcher(value);
+        cpfFormatIsValid = isValid();
         validateMatcher();
     }
 
     @Override
     public void validateValue() {
-        if (value == null) {
+        if (value == null || value.trim().isEmpty()) {
             throw new CpfFieldValueException();
         }
     }
 
     @Override
     public void validateMatcher() {
-        if (!cpfMatcher.matches()) {
+        if (!cpfFormatIsValid) {
             throw new CpfMatcherException(value);
         }
     }
@@ -48,6 +48,8 @@ public class Cpf extends Document {
 
     @Override
     public boolean isValid() {
+        cpfPattern = Pattern.compile(pattern);
+        cpfMatcher = cpfPattern.matcher(value);
         return cpfMatcher.matches();
     }
 
