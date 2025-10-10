@@ -53,10 +53,6 @@ public class Cpf extends Document {
         return cpfMatcher.matches();
     }
 
-    public String getValue() {
-        return value;
-    }
-
     @Override
     public int getDigits() {
         return totalNumbers;

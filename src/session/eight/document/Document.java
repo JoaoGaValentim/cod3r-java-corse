@@ -18,6 +18,10 @@ public abstract class Document {
         this.value = value;
     }
 
+    public String getValue() {
+        return value;
+    }
+
     public abstract void validateMatcher();
 
     public abstract void validateValue();
