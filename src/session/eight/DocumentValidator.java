@@ -15,5 +15,7 @@ public class DocumentValidator {
         } catch (CpfFieldValueException e) {
             System.out.println(e.getMessage());
         }
+
+        System.out.println("Fim da validação.");
     }
 }

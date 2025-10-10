@@ -1,7 +1,6 @@
 package session.eight.document.exceptions;
 
 public abstract class DocumentMatcherException extends NullPointerException {
-
     private final String message;
 
     public DocumentMatcherException(String message) {
