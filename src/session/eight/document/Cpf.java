@@ -3,6 +3,7 @@ package session.eight.document;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import session.eight.document.exceptions.CpfMatcherException;
+import session.eight.document.exceptions.CpfDigitException;
 import session.eight.document.exceptions.CpfFieldValueException;
 
 public class Cpf extends Document {
@@ -12,6 +13,7 @@ public class Cpf extends Document {
     public Cpf(String value) {
         super(14, "(^\\d{3}\\x2E\\d{3}\\x2E\\d{3}\\x2D\\d{2}$)", value);
         validateValue();
+        validateDigit();
         cpfPattern = Pattern.compile(pattern);
         cpfMatcher = cpfPattern.matcher(value);
         validateMatcher();
@@ -28,6 +30,14 @@ public class Cpf extends Document {
     public void validateMatcher() {
         if (!cpfMatcher.matches()) {
             throw new CpfMatcherException(value);
+        }
+    }
+
+    @Override
+    public void validateDigit() {
+        boolean cpfIsAllNumber = extractDigits().matches(NUMBERS_REGEXP);
+        if (!cpfIsAllNumber) {
+            throw new CpfDigitException();
         }
     }
 
