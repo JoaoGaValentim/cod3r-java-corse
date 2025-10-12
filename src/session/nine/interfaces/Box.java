@@ -18,6 +18,7 @@ abstract public interface Box<T> {
 
     public abstract T sum();
 
+    // a forEach implementation
     default void forEachInBox(Consumer<T> consumer) {
         for (T value : getAll()) {
             consumer.accept(value);
