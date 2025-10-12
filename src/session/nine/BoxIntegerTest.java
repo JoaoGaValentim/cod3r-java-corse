@@ -1,16 +1,23 @@
 package session.nine;
 
-import session.nine.models.NumericBoxDouble;
+import java.util.random.RandomGenerator;
+
+import session.nine.interfaces.Box;
+import session.nine.models.NumericBox;
 
 public class BoxIntegerTest {
     public static void main(String[] args) {
-        NumericBoxDouble studentsBoxDouble = new NumericBoxDouble();
 
-        for (int i = 0; i < 10; i++) {
-            studentsBoxDouble.add(10 * Math.random());
+        NumericBox<Integer> eBox = new NumericBox<>();
+
+        for (int i = 0; i < 100; i++) {
+            eBox.add(RandomGenerator.getDefault().nextInt(1100));
         }
 
-        studentsBoxDouble.forEachInBox(System.out::println);
-        System.out.println(studentsBoxDouble.average());
+        System.out.println(eBox.sum());
+
+        eBox.forEachInBox(System.out::println);
+
+        // Box<Integer> aBox = new NumericBox<>();
     }
 }
