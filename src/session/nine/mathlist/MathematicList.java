@@ -1,18 +1,16 @@
 package session.nine.mathlist;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.TreeSet;
-import java.util.function.BinaryOperator;
 import java.util.function.Function;
 
-public class MathematicCollection<T extends Number> {
-    private static Function<Double, Double> doubleValues = value -> value.doubleValue();
+public class MathematicList<T extends Number> {
     private static Function<Double, Integer> binary = value -> {
         String binaryValue = Integer.toBinaryString(value.intValue());
         return Integer.parseInt(binaryValue);
     };
-    private static BinaryOperator<Double> biResult = (acc, act) -> acc + act;
 
     private static <T extends Number> double factorial(T t) {
         double fat = 1;
@@ -23,7 +21,9 @@ public class MathematicCollection<T extends Number> {
     }
 
     private static <T extends Number> List<Double> createDoubleList(List<T> list) {
-        return list.stream().map(t -> t.doubleValue()).toList();
+        if (list == null)
+            return new ArrayList<>();
+        return new ArrayList<>(list.stream().map(Number::doubleValue).toList());
     }
 
     public static <T extends Number> List<Double> extractOdds(List<T> list) {
@@ -42,7 +42,21 @@ public class MathematicCollection<T extends Number> {
     }
 
     public static <T extends Number> double sum(List<T> list) {
-        return createDoubleList(list).stream().map(doubleValues).reduce(biResult).get();
+        return createDoubleList(list).stream().mapToDouble(Double::doubleValue).sum();
+    }
+
+    public static <T extends Number> double sumDistinct(List<T> list) {
+        return noRepeatList(list).stream().mapToDouble(Number::doubleValue).sum();
+    }
+
+    public static <T extends Number> Double sumMany(List<List<T>> lists) {
+        List<Double> values = lists.stream().flatMap(List::stream).map(Number::doubleValue).toList();
+        return sum(values);
+    }
+
+    public static <T extends Number> Double sumManyDistinct(List<List<T>> lists) {
+        List<Double> values = lists.stream().flatMap(List::stream).map(Number::doubleValue).toList();
+        return sumDistinct(values);
     }
 
     public static <T extends Number> List<Double> fats(List<T> list) {
@@ -77,12 +91,22 @@ public class MathematicCollection<T extends Number> {
 
     public static <T extends Number, V extends Number> Double averageDoubleLists(List<T> firstList,
             List<V> lastList) {
-        double totalSumList = sumDoubleLists(firstList, lastList);
-        if (firstList.size() == lastList.size()) {
-            return totalSumList / firstList.size();
-        }
+        double firstAverage = average(firstList);
+        double lastAverage = average(lastList);
+        return (firstAverage + lastAverage) / 2;
+    }
 
-        double totalSumSizes = firstList.size() + lastList.size();
-        return totalSumList / totalSumSizes;
+    public static <T extends Number> List<Double> unionTwo(List<T> firstList, List<T> lastList) {
+        List<Double> firsts = createDoubleList(firstList);
+        List<Double> lasts = createDoubleList(lastList);
+        firsts.addAll(lasts);
+        return firsts;
+    }
+
+    public static <T extends Number> List<Double> unionMany(List<List<T>> lists) {
+        List<Double> unionResult = lists.stream().map(list -> createDoubleList(list))
+                .reduce((acc, act) -> unionTwo(acc, act)).orElse(Collections.emptyList());
+
+        return unionResult;
     }
 }
