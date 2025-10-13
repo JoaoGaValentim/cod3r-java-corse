@@ -11,6 +11,7 @@ public class EvenTest {
         try {
             System.out.println(ranking.getValue(1.0));
             System.out.println(ranking.getValue(2.0));
+            System.out.println(ranking.getValue(3.0));
         } catch (NullPointerException e) {
             System.out.println(e.getMessage());
         }

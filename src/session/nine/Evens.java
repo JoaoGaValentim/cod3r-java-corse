@@ -1,11 +1,11 @@
 package session.nine;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Optional;
 import java.util.Set;
 
 public class Evens<K extends Number, V> {
-    private final Set<Even<K, V>> items = new HashSet<>();
+    private final Set<Even<K, V>> items = new LinkedHashSet<>();
 
     public void add(K k, V v) {
         if (k == null) {
@@ -30,4 +30,5 @@ public class Evens<K extends Number, V> {
                 .findFirst();
         return evenOptional.isPresent() ? evenOptional.get().getValue() : null;
     }
+
 }
