@@ -58,14 +58,13 @@ public class SpaceShip {
                                 .forEach(System.out::println);
 
                 Predicate<Planet> lowDistance = planet -> planet.getDistance() < 227.9e6;
-                Function<Planet, Double> distances = planet -> planet.getDistance();
                 BiFunction<Planet, Double, Planet> addDistance = (planet, value) -> planet.addDistance(value);
                 BinaryOperator<Planet> sumDistance = (fPlanet, lPlanet) -> Planet.combiner(fPlanet, lPlanet);
 
                 var result = planets
                                 .stream()
                                 .filter(lowDistance)
-                                .map(distances)
+                                .map(Planet::getDistance)
                                 .reduce(new Planet(), addDistance, sumDistance);
 
                 System.out.println(result.getDistanceSum());
