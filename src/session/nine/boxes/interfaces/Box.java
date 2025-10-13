@@ -1,4 +1,4 @@
-package session.nine.interfaces;
+package session.nine.boxes.interfaces;
 
 import java.util.List;
 import java.util.function.Consumer;

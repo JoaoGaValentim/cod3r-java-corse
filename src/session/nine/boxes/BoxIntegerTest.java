@@ -1,9 +1,8 @@
-package session.nine;
+package session.nine.boxes;
 
 import java.util.random.RandomGenerator;
 
-import session.nine.interfaces.Box;
-import session.nine.models.NumericBox;
+import session.nine.boxes.models.NumericBox;
 
 public class BoxIntegerTest {
     public static void main(String[] args) {

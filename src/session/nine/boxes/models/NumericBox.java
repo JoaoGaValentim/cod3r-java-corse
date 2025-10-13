@@ -1,9 +1,9 @@
-package session.nine.models;
+package session.nine.boxes.models;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import session.nine.interfaces.Box;
+import session.nine.boxes.interfaces.Box;
 
 public class NumericBox<T extends Number> implements Box<T> {
     private final List<T> numbers = new ArrayList<>();
