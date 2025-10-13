@@ -25,6 +25,9 @@ public class MainTest {
         numbers = Arrays.asList(10, 10, 10); // 10
         var otherStudent = Arrays.asList(10, 10, 9, 9); // 9,5
 
+        System.out.println(MathematicList.unionTwo(numbers, otherStudent));
         System.out.println(MathematicList.averageDoubleLists(numbers, otherStudent));
+
+        System.out.println(MathematicList.binaryOf(1, 2, 3));
     }
 }

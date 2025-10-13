@@ -3,8 +3,10 @@ package session.nine.mathlist;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.TreeSet;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class MathematicList<T extends Number> {
     private static Function<Double, Integer> binary = value -> {
@@ -23,7 +25,13 @@ public class MathematicList<T extends Number> {
     private static <T extends Number> List<Double> createDoubleList(List<T> list) {
         if (list == null)
             return new ArrayList<>();
-        return new ArrayList<>(list.stream().map(Number::doubleValue).toList());
+
+        List<Double> nonNullDoubles = list.stream()
+                .filter(Objects::nonNull)
+                .map(Number::doubleValue)
+                .collect(Collectors.toList());
+
+        return nonNullDoubles;
     }
 
     public static <T extends Number> List<Double> extractOdds(List<T> list) {
@@ -108,5 +116,15 @@ public class MathematicList<T extends Number> {
                 .reduce((acc, act) -> unionTwo(acc, act)).orElse(Collections.emptyList());
 
         return unionResult;
+    }
+
+    public static <T extends Number> List<Integer> binaryOf(Integer... elements) {
+        List<Integer> binaryList = new ArrayList<>();
+
+        for (Integer value : elements) {
+            binaryList.add(Integer.parseInt(Integer.toBinaryString(value)));
+        }
+
+        return List.copyOf(binaryList);
     }
 }
