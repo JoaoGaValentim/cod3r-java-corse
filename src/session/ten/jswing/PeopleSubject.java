@@ -5,9 +5,9 @@ import java.util.List;
 
 public class PeopleSubject {
     private final List<People> peoples = new ArrayList<>();
-    private final List<TableObserver> observers = new ArrayList<>();
+    private final List<PeopleObserver> observers = new ArrayList<>();
 
-    public void addObserver(TableObserver observer) {
+    public void addObserver(PeopleObserver observer) {
         observers.add(observer);
     }
 

@@ -11,7 +11,7 @@ import javax.swing.JTable;
 import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 
-public class FrameSwing extends JFrame implements TableObserver {
+public class FrameSwing extends JFrame implements PeopleObserver {
     private final List<People> peoples = Arrays.asList(
             new People("João", 24),
             new People("Clara", 29),
