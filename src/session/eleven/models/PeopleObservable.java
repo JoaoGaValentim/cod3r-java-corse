@@ -29,11 +29,6 @@ public class PeopleObservable implements Observable {
 
     @Override
     public void notifyObservers() {
-        // Apenas notifica, sem carregar do banco
-        observers.forEach(observer -> observer.updateTable(new ArrayList<>(peoples)));
-    }
-
-    public void loadPeoplesFromDatabase() {
         peoples.clear();
 
         String sql = "SELECT name FROM peoples;";
@@ -50,6 +45,6 @@ public class PeopleObservable implements Observable {
             System.err.println("Erro ao carregar pessoas do banco: " + e.getMessage());
         }
 
-        notifyObservers();
+        observers.forEach(observer -> observer.updateTable(peoples));
     }
 }

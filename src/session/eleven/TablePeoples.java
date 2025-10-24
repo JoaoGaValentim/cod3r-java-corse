@@ -1,5 +1,6 @@
 package session.eleven;
 
+import java.awt.Color;
 import java.util.List;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -25,12 +26,17 @@ public class TablePeoples extends JFrame implements Observer {
         };
 
         table = new JTable(model);
+        table.setOpaque(true);
+        table.setBackground(Color.RED);
+        table.setForeground(Color.WHITE);
         JScrollPane scrollPane = new JScrollPane(table);
+        scrollPane.setOpaque(true);
+        scrollPane.setBackground(Color.BLACK);
         add(scrollPane);
 
         PeopleObservable observable = new PeopleObservable();
         observable.subscribe(this);
-        observable.loadPeoplesFromDatabase();
+        observable.notifyObservers();
 
         setVisible(true);
     }

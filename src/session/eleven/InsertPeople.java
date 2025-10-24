@@ -17,15 +17,10 @@ import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
-import session.eleven.models.People;
-import session.eleven.models.PeopleObservable;
-import session.eleven.models.interfaces.Observer;
-
-public class InsertPeople extends JFrame implements Observer {
+public class InsertPeople extends JFrame {
     private final JLabel label = new JLabel("Informe o nome da pessoa: ");
     private final JTextField field = new JTextField();
     private final JButton btnSave = new JButton("Salvar");
-    private final TablePeoples tablePeoples = new TablePeoples();
 
     public InsertPeople() {
         setTitle("Adicionar pessoa");
@@ -38,9 +33,6 @@ public class InsertPeople extends JFrame implements Observer {
         JPanel content = new JPanel();
         content.setBorder(new EmptyBorder(10, 10, 10, 10));
         content.setLayout(new GridLayout(3, 1));
-
-        PeopleObservable observable = new PeopleObservable();
-        observable.subscribe(this);
 
         content.add(label);
         content.add(field);
@@ -66,8 +58,6 @@ public class InsertPeople extends JFrame implements Observer {
                             statement.execute();
                             JOptionPane.showMessageDialog(content, field.getText() + " salvo com sucesso :)");
                             connection.close();
-                            observable.loadPeoplesFromDatabase();
-
                         } catch (SQLException e1) {
                             throw new RuntimeException(e1);
                         }
@@ -80,10 +70,5 @@ public class InsertPeople extends JFrame implements Observer {
 
     public static void main(String[] args) throws SQLException {
         SwingUtilities.invokeLater(InsertPeople::new);
-    }
-
-    @Override
-    public void updateTable(List<People> peoples) {
-        tablePeoples.updateTable(peoples);
     }
 }
