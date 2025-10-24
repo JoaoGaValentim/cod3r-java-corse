@@ -35,6 +35,7 @@ public class FrameSwing extends JFrame implements PeopleObserver {
         // JButton removeButton = new JButton("CLS");
 
         addPeopleButton.addActionListener(e -> {
+            System.out.println(e.getID());
             subject.addPeople(new People("Thais", 24));
             subject.addPeople(new People("Pedro", 24));
             subject.addPeople(new People("Laura", 24));

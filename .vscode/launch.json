@@ -1,0 +1,910 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BasicExceptions",
+            "request": "launch",
+            "mainClass": "session.eight.BasicExceptions",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "CheckedUnchecked",
+            "request": "launch",
+            "mainClass": "session.eight.CheckedUnchecked",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "DocumentValidator",
+            "request": "launch",
+            "mainClass": "session.eight.DocumentValidator",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ExceptionOfException",
+            "request": "launch",
+            "mainClass": "session.eight.ExceptionOfException",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ConnectionTest",
+            "request": "launch",
+            "mainClass": "session.eleven.ConnectionTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "CreateDatabase",
+            "request": "launch",
+            "mainClass": "session.eleven.CreateDatabase",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "CreateTableTest",
+            "request": "launch",
+            "mainClass": "session.eleven.CreateTableTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "InsertPeople",
+            "request": "launch",
+            "mainClass": "session.eleven.InsertPeople",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "TablePeoples",
+            "request": "launch",
+            "mainClass": "session.eleven.TablePeoples",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "AbstractTest",
+            "request": "launch",
+            "mainClass": "session.five.abstractoo.AbstractTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "PeopleTest",
+            "request": "launch",
+            "mainClass": "session.five.encapsulate.PeopleTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Game",
+            "request": "launch",
+            "mainClass": "session.five.inheritance.Game",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Drive",
+            "request": "launch",
+            "mainClass": "session.five.inheritance.inheritancetest.Drive",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ManyToManyTest",
+            "request": "launch",
+            "mainClass": "session.five.manytomany.ManyToManyTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "OneToManyTest",
+            "request": "launch",
+            "mainClass": "session.five.onetomany.OneToManyTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "OneToOneTest",
+            "request": "launch",
+            "mainClass": "session.five.onone.OneToOneTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Dinner",
+            "request": "launch",
+            "mainClass": "session.five.polymorphism.Dinner",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "session.five.shop.App",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ArrayExercise",
+            "request": "launch",
+            "mainClass": "session.four.ArrayExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ArrayTest",
+            "request": "launch",
+            "mainClass": "session.four.ArrayTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ForEachArray",
+            "request": "launch",
+            "mainClass": "session.four.ForEachArray",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MatrixArray",
+            "request": "launch",
+            "mainClass": "session.four.MatrixArray",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Hash",
+            "request": "launch",
+            "mainClass": "session.four.collections.Hash",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Lists",
+            "request": "launch",
+            "mainClass": "session.four.collections.Lists",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MapExample",
+            "request": "launch",
+            "mainClass": "session.four.collections.MapExample",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "NotOrderSet",
+            "request": "launch",
+            "mainClass": "session.four.collections.NotOrderSet",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "OrderSet",
+            "request": "launch",
+            "mainClass": "session.four.collections.OrderSet",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "QueueExample",
+            "request": "launch",
+            "mainClass": "session.four.collections.QueueExample",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "StackExample",
+            "request": "launch",
+            "mainClass": "session.four.collections.StackExample",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ComparableTest",
+            "request": "launch",
+            "mainClass": "session.nine.ComparableTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "EvenTest",
+            "request": "launch",
+            "mainClass": "session.nine.EvenTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "BoxIntegerTest",
+            "request": "launch",
+            "mainClass": "session.nine.boxes.BoxIntegerTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MainTest",
+            "request": "launch",
+            "mainClass": "session.nine.mathlist.MainTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Calculator",
+            "request": "launch",
+            "mainClass": "session.one.Calculator",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "FirstApp",
+            "request": "launch",
+            "mainClass": "session.one.FirstApp",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "StringTypeEquals",
+            "request": "launch",
+            "mainClass": "session.one.StringTypeEquals",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "BhaskaraExercise",
+            "request": "launch",
+            "mainClass": "session.one.exercises.BhaskaraExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "BmiExercise",
+            "request": "launch",
+            "mainClass": "session.one.exercises.BmiExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "PowerExercise",
+            "request": "launch",
+            "mainClass": "session.one.exercises.PowerExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "TemperatureExercise",
+            "request": "launch",
+            "mainClass": "session.one.exercises.TemperatureExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "TemperatureExerciseTwo",
+            "request": "launch",
+            "mainClass": "session.one.exercises.TemperatureExerciseTwo",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "TriangleAreaExercise",
+            "request": "launch",
+            "mainClass": "session.one.exercises.TriangleAreaExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ArithmeticOperators",
+            "request": "launch",
+            "mainClass": "session.one.operators.ArithmeticOperators",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ArithmeticTest",
+            "request": "launch",
+            "mainClass": "session.one.operators.ArithmeticTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "AttributionOperators",
+            "request": "launch",
+            "mainClass": "session.one.operators.AttributionOperators",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "LogicOperators",
+            "request": "launch",
+            "mainClass": "session.one.operators.LogicOperators",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "LogicOperatorsTest",
+            "request": "launch",
+            "mainClass": "session.one.operators.LogicOperatorsTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "RelationalOperators",
+            "request": "launch",
+            "mainClass": "session.one.operators.RelationalOperators",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "TernaryOperators",
+            "request": "launch",
+            "mainClass": "session.one.operators.TernaryOperators",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "UnaryOperators",
+            "request": "launch",
+            "mainClass": "session.one.operators.UnaryOperators",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "CircleArea",
+            "request": "launch",
+            "mainClass": "session.one.variables.CircleArea",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Console",
+            "request": "launch",
+            "mainClass": "session.one.variables.Console",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Imports",
+            "request": "launch",
+            "mainClass": "session.one.variables.Imports",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Inference",
+            "request": "launch",
+            "mainClass": "session.one.variables.Inference",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ParserValues",
+            "request": "launch",
+            "mainClass": "session.one.variables.ParserValues",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "PointNotation",
+            "request": "launch",
+            "mainClass": "session.one.variables.PointNotation",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Primitives",
+            "request": "launch",
+            "mainClass": "session.one.variables.Primitives",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "PrimitivesAndObjects",
+            "request": "launch",
+            "mainClass": "session.one.variables.PrimitivesAndObjects",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "PrimitivesParsers",
+            "request": "launch",
+            "mainClass": "session.one.variables.PrimitivesParsers",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "SalaryAverage",
+            "request": "launch",
+            "mainClass": "session.one.variables.SalaryAverage",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "StringToNumber",
+            "request": "launch",
+            "mainClass": "session.one.variables.StringToNumber",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "StringType",
+            "request": "launch",
+            "mainClass": "session.one.variables.StringType",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Temperature",
+            "request": "launch",
+            "mainClass": "session.one.variables.Temperature",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Wrappers",
+            "request": "launch",
+            "mainClass": "session.one.variables.Wrappers",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "AverageTest",
+            "request": "launch",
+            "mainClass": "session.seven.AverageTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "BuildingStreams",
+            "request": "launch",
+            "mainClass": "session.seven.BuildingStreams",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MapStream",
+            "request": "launch",
+            "mainClass": "session.seven.MapStream",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MatchJava",
+            "request": "launch",
+            "mainClass": "session.seven.MatchJava",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MinMax",
+            "request": "launch",
+            "mainClass": "session.seven.MinMax",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "OthersStreamMethods",
+            "request": "launch",
+            "mainClass": "session.seven.OthersStreamMethods",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "PrintObjects",
+            "request": "launch",
+            "mainClass": "session.seven.PrintObjects",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ReduceOne",
+            "request": "launch",
+            "mainClass": "session.seven.ReduceOne",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ReduceThree",
+            "request": "launch",
+            "mainClass": "session.seven.ReduceThree",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ReduceTwo",
+            "request": "launch",
+            "mainClass": "session.seven.ReduceTwo",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "SchoolClassTest",
+            "request": "launch",
+            "mainClass": "session.seven.SchoolClassTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MapTest",
+            "request": "launch",
+            "mainClass": "session.seven.maptest.MapTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "TestClasses",
+            "request": "launch",
+            "mainClass": "session.seven.school.TestClasses",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "SpaceShip",
+            "request": "launch",
+            "mainClass": "session.seven.universe.SpaceShip",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "BinaryOperatorJava",
+            "request": "launch",
+            "mainClass": "session.six.BinaryOperatorJava",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Calculator(1)",
+            "request": "launch",
+            "mainClass": "session.six.Calculator",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ForEachLambda",
+            "request": "launch",
+            "mainClass": "session.six.ForEachLambda",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "FunctionJava",
+            "request": "launch",
+            "mainClass": "session.six.FunctionJava",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "JavaConsumer",
+            "request": "launch",
+            "mainClass": "session.six.JavaConsumer",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "JavaLambdasInterfaces",
+            "request": "launch",
+            "mainClass": "session.six.JavaLambdasInterfaces",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "JavaPredicate",
+            "request": "launch",
+            "mainClass": "session.six.JavaPredicate",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "LambdaTest",
+            "request": "launch",
+            "mainClass": "session.six.LambdaTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "PredicateComposition",
+            "request": "launch",
+            "mainClass": "session.six.PredicateComposition",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "SupplierJava",
+            "request": "launch",
+            "mainClass": "session.six.SupplierJava",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ThreadJava",
+            "request": "launch",
+            "mainClass": "session.six.ThreadJava",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "UnaryJava",
+            "request": "launch",
+            "mainClass": "session.six.UnaryJava",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "LambdaTestModule",
+            "request": "launch",
+            "mainClass": "session.six.lambdatest.LambdaTestModule",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Surprise",
+            "request": "launch",
+            "mainClass": "session.ten.birthday.Surprise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "FrameSwing",
+            "request": "launch",
+            "mainClass": "session.ten.jswing.FrameSwing",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "CircleAreaTest",
+            "request": "launch",
+            "mainClass": "session.three.CircleAreaTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "DateTest",
+            "request": "launch",
+            "mainClass": "session.three.DateTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Equals",
+            "request": "launch",
+            "mainClass": "session.three.Equals",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "NullValues",
+            "request": "launch",
+            "mainClass": "session.three.NullValues",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ProductTest",
+            "request": "launch",
+            "mainClass": "session.three.ProductTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ReferenceVsValue",
+            "request": "launch",
+            "mainClass": "session.three.ReferenceVsValue",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ReferenceVsValueTest",
+            "request": "launch",
+            "mainClass": "session.three.ReferenceVsValueTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "Dinner(1)",
+            "request": "launch",
+            "mainClass": "session.three.exercise.Dinner",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "IfControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.controls.IfControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "IfElseControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.controls.IfElseControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "IfElseIfControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.controls.IfElseIfControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "IfElseIfTest",
+            "request": "launch",
+            "mainClass": "session.two.controls.IfElseIfTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "IfTest",
+            "request": "launch",
+            "mainClass": "session.two.controls.IfTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "SwitchControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.controls.SwitchControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "SwitchPartTwoControlStruct",
+            "request": "launch",
+            "mainClass": "session.two.controls.SwitchPartTwoControlStruct",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "LeapYearExercise",
+            "request": "launch",
+            "mainClass": "session.two.exercises.LeapYearExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "LuckyNumberExercise",
+            "request": "launch",
+            "mainClass": "session.two.exercises.LuckyNumberExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MaxValueExercise",
+            "request": "launch",
+            "mainClass": "session.two.exercises.MaxValueExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "PrimeCheckerExercise",
+            "request": "launch",
+            "mainClass": "session.two.exercises.PrimeCheckerExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "PrimeNumberExercise",
+            "request": "launch",
+            "mainClass": "session.two.exercises.PrimeNumberExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "StudentAverageCalculator",
+            "request": "launch",
+            "mainClass": "session.two.exercises.StudentAverageCalculator",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "SumWhileExercise",
+            "request": "launch",
+            "mainClass": "session.two.exercises.SumWhileExercise",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "VerifyNumberInInterval",
+            "request": "launch",
+            "mainClass": "session.two.exercises.VerifyNumberInInterval",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "BreakExample",
+            "request": "launch",
+            "mainClass": "session.two.loops.BreakExample",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "BreakExampleTwo",
+            "request": "launch",
+            "mainClass": "session.two.loops.BreakExampleTwo",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ContinueExample",
+            "request": "launch",
+            "mainClass": "session.two.loops.ContinueExample",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ContinueExampleTwo",
+            "request": "launch",
+            "mainClass": "session.two.loops.ContinueExampleTwo",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "DoWhileControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.loops.DoWhileControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ForControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.loops.ForControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "ForTest",
+            "request": "launch",
+            "mainClass": "session.two.loops.ForTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MoreAboutForPartThreeControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.loops.MoreAboutForPartThreeControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MoreAboutForPartTwoControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.loops.MoreAboutForPartTwoControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "MoreAboutWhileControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.loops.MoreAboutWhileControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "WhileControlStructure",
+            "request": "launch",
+            "mainClass": "session.two.loops.WhileControlStructure",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        },
+        {
+            "type": "java",
+            "name": "WhileControlStructureTest",
+            "request": "launch",
+            "mainClass": "session.two.loops.WhileControlStructureTest",
+            "projectName": "cod3r-java-corse_ae8cb8c4"
+        }
+    ]
+}
