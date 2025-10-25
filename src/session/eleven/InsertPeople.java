@@ -3,10 +3,7 @@ package session.eleven;
 import java.awt.CardLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -46,19 +43,14 @@ public class InsertPeople extends JFrame {
                         }
 
                         try {
-                            Connection connection = ConnectionFactory.connect();
-
-                            String sql = """
-                                    INSERT INTO peoples (name) VALUES (?);
-                                    """;
-
-                            PreparedStatement statement = connection.prepareStatement(sql);
-                            statement.setString(1, field.getText());
-                            statement.execute();
-                            JOptionPane.showMessageDialog(content, field.getText() + " salvo com sucesso :)");
-                            connection.close();
-                        } catch (SQLException e1) {
-                            throw new RuntimeException(e1);
+                            PeopleDAO dao = new PeopleDAO();
+                            boolean isSave = dao.save(new People(0, field.getText()));
+                            dao.close();
+                            if (isSave) {
+                                JOptionPane.showMessageDialog(content, field.getText() + " foi salvo com sucesso :)");
+                            }
+                        } catch (RuntimeException error) {
+                            JOptionPane.showMessageDialog(content, error.toString() + " ocorreu!", "erro", ERROR);
                         }
                     };
                 });
