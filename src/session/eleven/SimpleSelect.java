@@ -10,9 +10,10 @@ import java.util.List;
 public class SimpleSelect {
     public static void main(String[] args) {
         final String sql = "SELECT * FROM peoples;";
+
         try (Connection connection = ConnectionFactory.connect();
                 PreparedStatement statement = connection.prepareStatement(sql);
-                ResultSet result = statement.executeQuery();) {
+                ResultSet result = statement.executeQuery()) {
 
             List<People> peoples = new ArrayList<>();
 
@@ -23,7 +24,6 @@ public class SimpleSelect {
             }
 
             peoples.forEach(people -> System.out.println(people.getId() + " - " + people.getName()));
-
             connection.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
